@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrandCentralDispatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Central Dispatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkK-xt-KT9">
+                                <rect key="frame" x="20" y="20" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zhE-PQ-jiF">
+                                <rect key="frame" x="113" y="268" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vAb-8L-Cc4"/>
+                                </connections>
+                            </stepper>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-Bw-rhs">
+                                <rect key="frame" x="135.5" y="350" width="51" height="31"/>
+                                <connections>
+                                    <action selector="activDispatch:" destination="BYZ-38-t0r" eventType="valueChanged" id="mCd-wN-kGm"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fbp-WB-S30">
+                                <rect key="frame" x="90.5" y="401" width="139" height="32"/>
+                                <segments>
+                                    <segment title="Global"/>
+                                    <segment title="Specific"/>
+                                </segments>
+                            </segmentedControl>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-XP-qbe">
+                                <rect key="frame" x="36" y="472" width="248" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPN-mf-avL">
+                                <rect key="frame" x="100" y="48.5" width="120" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bkK-xt-KT9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4la-Rq-yC6"/>
+                            <constraint firstItem="iPN-mf-avL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="AjA-DH-0Pi"/>
+                            <constraint firstItem="iPN-mf-avL" firstAttribute="top" secondItem="bkK-xt-KT9" secondAttribute="bottom" constant="8" id="Dng-83-4pL"/>
+                            <constraint firstItem="wlK-Bw-rhs" firstAttribute="top" secondItem="zhE-PQ-jiF" secondAttribute="bottom" constant="50" id="F2p-Ky-Aya"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aqa-XP-qbe" secondAttribute="trailing" constant="20" id="Lxr-ay-0AI"/>
+                            <constraint firstItem="bkK-xt-KT9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="QjQ-aj-xTm"/>
+                            <constraint firstItem="fbp-WB-S30" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vwu-2p-pRD"/>
+                            <constraint firstItem="aqa-XP-qbe" firstAttribute="top" secondItem="fbp-WB-S30" secondAttribute="bottom" constant="40" id="Z00-Dj-RiA"/>
+                            <constraint firstItem="aqa-XP-qbe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="b86-PP-oja"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bkK-xt-KT9" secondAttribute="trailing" constant="20" id="bw6-yP-Bm5"/>
+                            <constraint firstItem="zhE-PQ-jiF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cx6-VC-Vbv"/>
+                            <constraint firstItem="aqa-XP-qbe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gsX-g1-5Q5"/>
+                            <constraint firstItem="fbp-WB-S30" firstAttribute="top" secondItem="wlK-Bw-rhs" secondAttribute="bottom" constant="20" id="gw4-Kc-s5W"/>
+                            <constraint firstItem="zhE-PQ-jiF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lNc-AJ-pxT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iPN-mf-avL" secondAttribute="trailing" constant="100" id="trF-77-kxu"/>
+                            <constraint firstItem="wlK-Bw-rhs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vAg-u9-jNs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ui_counter" destination="iPN-mf-avL" id="SJt-fO-cgk"/>
+                        <outlet property="ui_progressView" destination="aqa-XP-qbe" id="mjc-UM-reO"/>
+                        <outlet property="ui_switchPerf" destination="wlK-Bw-rhs" id="qZE-1K-WZn"/>
+                        <outlet property="ui_typeOfDispatch" destination="fbp-WB-S30" id="gKN-mv-ffp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+</document>
